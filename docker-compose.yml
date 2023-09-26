@@ -1,5 +1,9 @@
 services:
+  imgproxy:
+    image: darthsim/imgproxy:v3.23
+    ports:
+      - "8080:8080"
   server:
-    image: resize-content:1.1
+    image: resize-content:1.2
     ports:
       - "3000:3000"

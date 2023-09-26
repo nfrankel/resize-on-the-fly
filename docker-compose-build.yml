@@ -1,4 +1,8 @@
 services:
+  imgproxy:
+    image: darthsim/imgproxy:v3.23
+    ports:
+      - "8080:8080"
   server:
     build: .
     ports:
