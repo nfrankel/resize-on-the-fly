@@ -1,0 +1,15 @@
+routes:
+  - uri: "*"
+    upstream:
+      nodes:
+        "server:3000": 1
+  - uri: /resize/*
+    plugins:
+      proxy-rewrite:
+        regex_uri:
+          - /resize/(.*)/(.*)/(.*)
+          - /rs:fill/w:$1/plain/http://server:3000/$2@$3
+    upstream:
+      nodes:
+        "imgproxy:8080": 1
+#END

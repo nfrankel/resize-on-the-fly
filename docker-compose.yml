@@ -1,9 +1,12 @@
 services:
+  apisix:
+    image: apache/apisix:3.8.0-debian
+    volumes:
+      - ./apisix/config.yml:/usr/local/apisix/conf/config.yaml:ro
+      - ./apisix/apisix.yml:/usr/local/apisix/conf/apisix.yaml:ro
+    ports:
+      - "9080:9080"
   imgproxy:
     image: darthsim/imgproxy:v3.23
-    ports:
-      - "8080:8080"
   server:
-    image: resize-content:1.2
-    ports:
-      - "3000:3000"
+    image: resize-content:1.4

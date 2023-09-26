@@ -1,4 +1,4 @@
-#docker build -t resize-content:1.2 .
+#docker build -t resize-content:1.4 .
 FROM busybox:1.36
 
 WORKDIR /home
