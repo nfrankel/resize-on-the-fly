@@ -1,4 +1,4 @@
-#docker build -t resize-content:1.0 .
+#docker build -t resize-content:1.1 .
 FROM busybox:1.36
 
 WORKDIR /home
@@ -6,6 +6,8 @@ WORKDIR /home
 COPY content/style.css .
 COPY content/index.html .
 COPY content/my.jpg .
+COPY content/my.webp .
+COPY content/resize/* .
 
 EXPOSE 3000
 

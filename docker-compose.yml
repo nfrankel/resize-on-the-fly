@@ -1,5 +1,5 @@
 services:
   server:
-    image: resize-content:1.0
+    image: resize-content:1.1
     ports:
       - "3000:3000"

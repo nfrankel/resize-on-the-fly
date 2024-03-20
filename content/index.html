@@ -7,6 +7,19 @@
 </head>
 <body>
 <h1>Welcome to Resize on-the-fly</h1>
-<img src="my.jpg" />
+<picture>
+    <source media="(max-width: 199px)" srcset="my-200.webp" />
+    <source media="(max-width: 199px)" srcset="my-200.jpg" />
+    <source media="(max-width: 399px)" srcset="my-400.webp" />
+    <source media="(max-width: 399px)" srcset="my-400.jpg" />
+    <source media="(max-width: 599px)" srcset="my-600.webp" />
+    <source media="(max-width: 599px)" srcset="my-600.jpg" />
+    <source media="(max-width: 799px)" srcset="my-800.webp" />
+    <source media="(max-width: 799px)" srcset="my-800.jpg" />
+    <source media="(max-width: 999px)" srcset="my-1000.webp" />
+    <source media="(max-width: 999px)" srcset="my-1000.jpg" />
+    <source srcset="my.webp" />
+    <img src="my.jpg" />
+</picture>
 </body>
 </html>
