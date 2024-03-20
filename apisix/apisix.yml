@@ -5,6 +5,7 @@ routes:
         "server:3000": 1
   - uri: /resize/*
     plugins:
+      proxy-cache: ~
       proxy-rewrite:
         regex_uri:
           - /resize/(.*)/(.*)/(.*)
